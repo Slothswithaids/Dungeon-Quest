@@ -1,0 +1,10 @@
+getgenv().autoSwing = true -- Change boolean value to false to stop auto-swing.
+
+local Character = game:GetService("Players").LocalPlayer.Character
+local RunService = game:GetService("RunService")
+
+while autoSwing do
+    RunService.Heartbeat:Wait()
+    Character:FindFirstChild("Bronze Dagger").swing:FireServer()
+end
+
